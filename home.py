@@ -12,7 +12,7 @@ address=location.json()
 if(address["status"]=="success"):
     with st.skeleton():
         time.sleep(1)
-    st.success("✅"+"Location Detected!",icon="spinner",title="Live")
+    st.success("✅"+"Connection established!",icon="spinner",title="Live")
 request=requests.get(f"https://api.weatherapi.com/v1/current.json?key={api_key}&q={address["city"]}&aqi=yes")
 request=request.json()
 a,c,d=st.columns([1.9,1.5,1.5])
